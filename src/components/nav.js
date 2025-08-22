@@ -4,6 +4,11 @@ import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+/**
+ * Renders a navigation bar with theme toggle functionality.
+ *
+ * The AppNav component initializes the theme based on the user's saved preference in localStorage, defaulting to light mode. It provides a toggle button to switch between dark and light modes, updating both the document body class and localStorage accordingly. The navigation bar includes links to the home, about, and contact pages.
+ */
 function AppNav() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -16,6 +21,9 @@ function AppNav() {
     }
   }, []);
 
+  /**
+   * Toggles the theme between dark and light modes.
+   */
   const toggleTheme = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);

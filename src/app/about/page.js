@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useEffect } from "react";
 
+/**
+ * Renders the About Page component with clinic information and animations.
+ */
 function AboutPage() {
   useEffect(() => {
     const observerOptions = {
