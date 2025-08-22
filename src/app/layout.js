@@ -19,6 +19,9 @@ export const metadata = {
   description: "this is an example page",
 };
 
+/**
+ * Renders the root layout of the application with navigation and main content.
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
