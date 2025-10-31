@@ -1,6 +1,9 @@
 (function () {
   if (typeof window === "undefined") return;
 
+  /**
+   * Pauses execution for a specified number of milliseconds.
+   */
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -13,6 +16,9 @@
   //   typing(element, 100);
   // });
 
+  /**
+   * Types out the text content of an element at a specified speed.
+   */
   async function typing(element, speed) {
     const text = element.textContent;
     element.textContent = "";
