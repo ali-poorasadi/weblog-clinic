@@ -16,6 +16,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  padding: 0px !important;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 }
 
 a {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
 }
 
@@ -161,3 +162,4 @@ body.dark-mode .lead {
 body.dark-mode .small {
   color: #adb5bd !important;
 }
+

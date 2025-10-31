@@ -43,13 +43,13 @@ function AppNav() {
       variant="dark"
       expand="lg"
       className="rounded-5 shadow"
-      style={{ 
-        position: "fixed", 
-        top: "1rem", 
-        left: "50%", 
+      style={{
+        position: "fixed",
+        top: "1rem",
+        left: "50%",
         transform: "translateX(-50%)",
         width: "90%",
-        zIndex: 1030
+        zIndex: 1030,
       }}
     >
       <Container>
@@ -59,24 +59,21 @@ function AppNav() {
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar">
           <Nav className="me-auto">
-            <Nav.Link as={Link} href="/">
+            <Nav.Link as={Link} href="/clinic_ex">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} href="/about">
+            <Nav.Link as={Link} href="/clinic_ex/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} href="/contact">
-              Contact
-            </Nav.Link>
           </Nav>
-          <Button
+          {/* <Button
             variant={isDarkMode ? "light" : "dark"}
             onClick={toggleTheme}
             className="ms-2"
             size="sm"
           >
             {isDarkMode ? "☀️ Light" : "🌙 Dark"}
-          </Button>
+          </Button> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -99,7 +99,10 @@ function AboutPage() {
       {/* Team Section */}
       <div className="row g-5 mb-5">
         <div className="col-lg-6">
-          <div className="card h-100 border-0 shadow-lg rounded-4">
+          <div
+            className="card h-100 border-0 shadow-lg rounded-4"
+            data-aos="zoom-in-up"
+          >
             <div className="card-body text-center p-5">
               <div className="mb-4">
                 <Image
@@ -136,7 +139,10 @@ function AboutPage() {
         </div>
 
         <div className="col-lg-6">
-          <div className="card h-100 border-0 shadow-lg rounded-4">
+          <div
+            className="card h-100 border-0 shadow-lg rounded-4"
+            data-aos="zoom-in-up"
+          >
             <div className="card-body text-center p-5">
               <div className="mb-4">
                 <Image
@@ -174,7 +180,7 @@ function AboutPage() {
 
       {/* Values Section */}
       <div className="row g-4 mb-5">
-        <div className="col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3"  data-aos="fade-up" data-aos-delay="0">
           <div className="text-center p-4">
             <div
               className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
@@ -189,7 +195,7 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3"  data-aos="fade-up" data-aos-delay="200">
           <div className="text-center p-4">
             <div
               className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
@@ -204,7 +210,7 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
           <div className="text-center p-4">
             <div
               className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
@@ -219,7 +225,7 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className="col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
           <div className="text-center p-4">
             <div
               className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
@@ -242,7 +248,7 @@ function AboutPage() {
             <div className="bg-primary bg-opacity-10 rounded-4 p-5">
               <h3 className="fw-bold mb-3">Our Journey</h3>
               <div className="timeline">
-                <div className="d-flex mb-3">
+                <div className="d-flex mb-3" data-aos="fade-right" data-aos-offset="0">
                   <div
                     className="bg-primary rounded-circle me-3"
                     style={{ width: "12px", height: "12px", marginTop: "8px" }}
@@ -254,7 +260,7 @@ function AboutPage() {
                     </p>
                   </div>
                 </div>
-                <div className="d-flex mb-3">
+                <div className="d-flex mb-3" data-aos="fade-right" data-aos-offset="100">
                   <div
                     className="bg-primary rounded-circle me-3"
                     style={{ width: "12px", height: "12px", marginTop: "8px" }}
@@ -266,7 +272,7 @@ function AboutPage() {
                     </p>
                   </div>
                 </div>
-                <div className="d-flex mb-3">
+                <div className="d-flex mb-3" data-aos="fade-right" data-aos-offset="150">
                   <div
                     className="bg-primary rounded-circle me-3"
                     style={{ width: "12px", height: "12px", marginTop: "8px" }}
@@ -278,7 +284,7 @@ function AboutPage() {
                     </p>
                   </div>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex" data-aos="fade-right" data-aos-offset="200">
                   <div
                     className="bg-primary rounded-circle me-3"
                     style={{ width: "12px", height: "12px", marginTop: "8px" }}

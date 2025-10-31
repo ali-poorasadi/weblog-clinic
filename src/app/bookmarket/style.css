@@ -1,0 +1,190 @@
+main {
+  /* background-image: url("/papertexture.jpg"); */
+  background-color: antiquewhite;
+  color: black;
+}
+
+body {
+  /* background-image: url("/papertexture.jpg"); */
+  background-color: antiquewhite;
+  padding: 0%;
+}
+
+main * {
+  background-image: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+
+button {
+  border: 2px solid;
+  border-color: black;
+  cursor: pointer;
+  border-radius: 25%;
+  padding: 0.5em;
+}
+
+a {
+  text-decoration: underline dashed;
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+}
+
+article {
+  position: relative;
+  z-index: 1;
+}
+
+article::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: -7px;
+  left: -7px;
+  right: 5px;
+  max-height: 80vh;
+  border-radius: 12;
+  background: url("/3.svg");
+  background-size: 15px;
+  /* opacity: 0.5; */
+  filter: saturate(1.1);
+  z-index: -1;
+  border: 3px solid;
+}
+
+article > div {
+  border: 3px solid black;
+  border-radius: 12;
+  padding: 16;
+  display: grid;
+  gap: 8;
+  max-height: 90vh;
+}
+
+.deals-item {
+  border-radius: 1em;
+  border: 3px solid black;
+  padding: 1em;
+  box-shadow: -5px 5px black;
+}
+/* Image-based shadow for Add buttons */
+.btn-shadow {
+  position: relative;
+  display: inline-block;
+}
+.btn-shadow::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -4px;
+  bottom: -10px;
+  height: 110%;
+  background: url("/3.svg");
+  background-size: 10px;
+  opacity: 0.5;
+  border-radius: 25%;
+  transform: scale(0.8);
+  z-index: 0;
+  border: 3px solid;
+}
+.btn-shadow .cta {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-shadow .cta:active {
+  transform: translate(-3px, 10px);
+  transition: 100ms;
+}
+
+.imageShdow {
+  /* transform: rotateX(15deg); */
+  border: 3px solid black;
+  box-shadow: -5px 5px 0 black;
+}
+
+/* Category Bar Styles */
+.category-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.category-scroll-auto {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  overflow: hidden;
+  animation: autoScroll 30s linear infinite;
+  width: max-content;
+}
+
+.category-scroll-auto:hover {
+  animation-play-state: paused;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-49.5%);
+  }
+}
+
+.category-item {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 black;
+}
+
+/* On touch devices: disable auto animation and allow manual horizontal scroll */
+@media (hover: none) and (pointer: coarse) {
+  .category-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-scroll-auto {
+    animation: none;
+    width: max-content;
+  }
+}
+
+.category-item:hover {
+  background-color: black;
+  color: white;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 black;
+}
+
+.category-item:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 black;
+}
+
+#bestsellers ul li{
+  position: relative;
+}
+#bestsellers ul > li::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  background: url("/line1.svg") center;
+  width: 100%;
+  height: 7px;
+}
+
+.typer-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 24px;
+  background: black;
+  /* vertical-align: bottom; */
+  margin-left: 2px;
+  margin-right: 2px;
+}
