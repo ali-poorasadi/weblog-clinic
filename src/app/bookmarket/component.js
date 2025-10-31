@@ -2,6 +2,9 @@
 
 import React, { useEffect, useRef } from "react";
 
+/**
+ * Renders a category bar with duplicated categories for infinite scrolling.
+ */
 export default function CategoryBar() {
   const categories = [
     "Fiction",
