@@ -12,8 +12,8 @@ main.homepage {
   text-align: center;
   overflow: hidden;
   /* Prevent scrolling on mobile */
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
+  /* -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none; */
 }
 
 .homepage .part {
@@ -21,7 +21,7 @@ main.homepage {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  width: 100%;
+  width: 100vw;
   max-width: 1200px;
   padding: 20px;
 }
@@ -52,7 +52,7 @@ main.homepage {
   }
 
   .homepage .part .row {
-    margin: 0;
+    margin: 0px;
   }
 
   .homepage .part .col-md-6 {
@@ -60,8 +60,8 @@ main.homepage {
   }
 }
 
-/* Prevent touch scrolling */
-body {
+/* Prevent touch scrolling ONLY on homepage */
+/* .homepage {
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -69,7 +69,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 ul,
 li {

@@ -19,7 +19,7 @@ function page() {
         id="banner"
         style={{
           marginTop: "0px",
-          padding: "2em 0",
+          paddingTop: 0,
           boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
         }}
       >
@@ -118,16 +118,9 @@ function page() {
       <section id="latest">
         <div style={{ maxWidth: "75%", margin: "auto", minHeight: "inherit" }}>
           <h2>آخرین خبرهای گردشگری</h2>
-          <div
-            style={{
-              margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: "2fr 1fr",
-              gap: 16,
-            }}
-          >
+          <div className="my-0 mx-auto row" >
             <article
-              className="shadow"
+              className="shadow col-12 col-md-8"
               style={{
                 borderRadius: 12,
                 padding: 16,
@@ -141,13 +134,15 @@ function page() {
                 پیشنهادهای عکاسی.
               </p>
             </article>
-            <aside style={{ display: "grid", gap: 12 }}>
+            <aside
+              className="col-md-4 col-12 px-1"
+              style={{ display: "grid", gap: 12 }}
+            >
               <a
                 href="#"
                 className="shadow"
                 style={{
                   background: "#f8fafc",
-                  border: "1px solid #e5e7eb",
                   borderRadius: 12,
                   padding: 12,
                   color: "#0f172a",
@@ -161,7 +156,6 @@ function page() {
                 className="shadow"
                 style={{
                   background: "#f8fafc",
-                  border: "1px solid #e5e7eb",
                   borderRadius: 12,
                   padding: 12,
                   color: "#0f172a",
@@ -301,7 +295,11 @@ function page() {
       <Image
         src="/image/pool.jpg"
         alt="logo"
-        style={{ width: "100%", maxHeight: "50hv", marginTop: "2em" }}
+        style={{
+          width: "100%",
+          maxHeight: "40hv",
+          objectFit: "cover",
+        }}
         width={1200}
         height={125}
       />

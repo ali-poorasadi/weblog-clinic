@@ -41,8 +41,8 @@ article::after {
   bottom: -7px;
   left: -7px;
   right: 5px;
-  max-height: 80vh;
-  border-radius: 12;
+  max-height: 90vh;
+  border-radius: 12px;
   background: url("/3.svg");
   background-size: 15px;
   /* opacity: 0.5; */
@@ -53,10 +53,10 @@ article::after {
 
 article > div {
   border: 3px solid black;
-  border-radius: 12;
-  padding: 16;
-  display: grid;
-  gap: 8;
+  border-radius: 12px;
+  padding: 16px;
+  /* display: grid;
+  gap: 8px; */
   max-height: 90vh;
 }
 

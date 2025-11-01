@@ -154,17 +154,32 @@ function initGSAPAnimation() {
 }
 
 // Prevent default touch behaviors
+// Limit global touch prevention to non-interactive areas on the homepage
+function isInteractiveTarget(target) {
+  return !!target.closest(
+    "a, button, input, textarea, select, [role=button], [contenteditable=true]"
+  );
+}
+
+function isHomepage() {
+  return document.querySelector(".homepage") != null;
+}
+
 document.addEventListener(
   "touchstart",
   function (e) {
-    e.preventDefault();
+    if (!isHomepage()) return; // only on homepage
+    if (isInteractiveTarget(e.target)) return; // don't block links/inputs/buttons
+    // e.preventDefault(); // usually not needed on touchstart
   },
-  { passive: false }
+  { passive: true }
 );
 
 document.addEventListener(
   "touchmove",
   function (e) {
+    if (!isHomepage()) return;
+    if (isInteractiveTarget(e.target)) return;
     e.preventDefault();
   },
   { passive: false }
@@ -173,9 +188,11 @@ document.addEventListener(
 document.addEventListener(
   "touchend",
   function (e) {
-    e.preventDefault();
+    if (!isHomepage()) return;
+    if (isInteractiveTarget(e.target)) return;
+    // don't block touchend by default; only specific logic below may prevent
   },
-  { passive: false }
+  { passive: true }
 );
 
 // Prevent zoom on double tap
@@ -183,13 +200,15 @@ let lastTouchEnd = 0;
 document.addEventListener(
   "touchend",
   function (event) {
+    if (!isHomepage()) return;
+    if (isInteractiveTarget(event.target)) return;
     const now = new Date().getTime();
     if (now - lastTouchEnd <= 300) {
       event.preventDefault();
     }
     lastTouchEnd = now;
   },
-  false
+  { passive: false }
 );
 
 // Initialize when DOM is loaded

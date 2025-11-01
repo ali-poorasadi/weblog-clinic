@@ -32,19 +32,19 @@ function page() {
                 <li>
                   <p>you can use it for your job. for example:</p>
                   <Link href="/clinic_ex" className="mx-3">
-                    clinic example
+                    <span>clinic example</span>
                   </Link>
                 </li>
                 <li>
                   <p>sharing experiences</p>
                   <Link href="/example2" className="mx-3">
-                    Tourist attractions site example
+                    <span>Tourist attractions site example</span>
                   </Link>
                 </li>
                 <li>
                   <p>style your store</p>
                   <Link href="/bookmarket" className="mx-3">
-                    digital book market example
+                    <span>digital book market example</span>
                   </Link>
                 </li>
               </ul>
@@ -78,7 +78,7 @@ function page() {
         </p>
       </div>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" />
-      <Script src="/scripts.js" />
+      <Script src="/scripts.js" strategy="lazyOnload" />
     </main>
   );
 }

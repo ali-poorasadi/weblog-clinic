@@ -1,13 +1,15 @@
 body {
-  background-color: rgb(170, 170, 180);
-  padding-top: 0px !important;
-  margin-top: 0 !important;
+  background-color: rgb(150, 130, 100);
+  direction: rtl;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 section {
   background-color: rgb(170, 170, 180);
   min-height: 40vh;
   padding: 2em;
 }
+
 main > :nth-child(odd) {
   background-color: rgb(150, 130, 100);
   color: white;
@@ -75,9 +77,9 @@ footer {
 .glass-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0%;
+  left: 0%;
+  right: 0%;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -90,8 +92,8 @@ footer {
 .glass-card::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   width: 1px;
   height: 100%;
   background: linear-gradient(

@@ -226,7 +226,7 @@ function page() {
       </section>
       <section className="mb-5">
         <div className="w-75 mx-auto row row-cols-1 row-cols-md-3">
-          <div className="col">
+          <div className="col mb-3">
             <div className="h-100 align-content-between deals-item">
               <div className="typer">
                 The world is like a mirror; if you frown at it, it will frown
@@ -237,7 +237,7 @@ function page() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col mb-3">
             <div className="h-100 align-content-between deals-item">
               <div className="typer">
                 When you want something, all the universe conspires in helping
@@ -248,7 +248,7 @@ function page() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col mb-3">
             <div className="h-100 align-content-between deals-item">
               <div className="typer">
                 Whenever you deeply desire something, know that this wish is the
