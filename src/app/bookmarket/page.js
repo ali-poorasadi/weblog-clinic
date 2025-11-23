@@ -16,6 +16,9 @@ const phi = localFont({
   display: "swap",
 });
 
+/**
+ * Renders the main page of the BookMarket application.
+ */
 function page() {
   return (
     <main className={phi.className}>

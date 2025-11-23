@@ -1,4 +1,11 @@
 // Wait for GSAP to load
+/**
+ * Initialize GSAP animations for a series of elements.
+ *
+ * This function sets up the initial state of elements with the class "part", animating them into view based on user interactions such as scrolling or touch events. It manages the animation state and transitions between parts, ensuring smooth animations using GSAP. The function also handles both desktop and mobile input for navigating through the parts.
+ *
+ * @returns {void}
+ */
 function initGSAPAnimation() {
   const parts = document.querySelectorAll(".part");
   let currentIndex = 0;
@@ -22,6 +29,9 @@ function initGSAPAnimation() {
     ease: "power2.out",
   });
 
+  /**
+   * Animates the transition to a specified part based on the index.
+   */
   function animateToPart(index) {
     // Don't animate if we're already at this part or currently animating
     if (index === currentIndex) return;
@@ -117,6 +127,16 @@ function initGSAPAnimation() {
     touchStartY = event.touches[0].clientY;
   }
 
+  /**
+   * Handles the end of a touch event to determine swipe direction and animate accordingly.
+   *
+   * This function checks if an animation is currently in progress. If not, it calculates the swipe distance
+   * based on the touch start and end positions. If the swipe distance exceeds a minimum threshold, it determines
+   * the next index based on the swipe direction (up or down) and triggers an animation to that part.
+   * The animation state is managed to prevent overlapping animations.
+   *
+   * @param {TouchEvent} event - The touch event containing the changed touch positions.
+   */
   function handleTouchEnd(event) {
     if (isAnimating) return;
 
